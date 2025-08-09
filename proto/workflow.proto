@@ -1,0 +1,27 @@
+syntax = "proto3";
+package workflow;
+
+option go_package = "github.com/you/workflow-runner/internal/pb;pb";
+
+service WorkflowService {
+  rpc StartWorkflow (StartReq) returns (StartResp);
+  rpc GetStatus (StatusReq) returns (StatusResp);
+}
+
+message StartReq {
+  string workflow_id = 1;
+}
+
+message StartResp {
+  string workflow_id = 1;
+  string run_id = 2;
+}
+
+message StatusReq {
+  string workflow_id = 1;
+}
+
+message StatusResp {
+  string workflow_id = 1;
+  string status = 2;
+}
