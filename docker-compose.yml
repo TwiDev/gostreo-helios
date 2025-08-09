@@ -8,5 +8,5 @@ services:
       dockerfile: ./temporal.dockerfile
     restart: always
     ports:
-      - 7233:7233
-      - 8233:8233
+      - "7233:7233"
+      - "8233:8233"
