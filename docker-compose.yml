@@ -10,3 +10,10 @@ services:
     ports:
       - "7233:7233"
       - "8233:8233"
+  postgres:
+    image: postgres:17
+    environment:
+      POSTGRES_DB: workflows
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: password
+    ports: [ "5432:5432" ]
