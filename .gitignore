@@ -2,3 +2,5 @@
 venv/
 workers/.venv
 *.pyc
+.idea
+.idea/
