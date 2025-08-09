@@ -1,0 +1,12 @@
+version: '3.8'
+
+services:
+  temporal:
+    image: temporal_lite:latest
+    build:
+      context: .
+      dockerfile: ./temporal.dockerfile
+    restart: always
+    ports:
+      - 7233:7233
+      - 8233:8233
